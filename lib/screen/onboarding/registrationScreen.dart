@@ -73,7 +73,7 @@ class _registrationScreenState extends State<registrationScreen> {
                         children: [
                           Text("Join With Us", style: Head1Text(colorDarkBlue)),
                           SizedBox(height: 1),
-                          Text("", style: Head6Text(colorLightGray)),
+                          Text("Learn with Imamul Anan", style: Head6Text(colorLightGray)),
 
                           SizedBox(height: 20),
                           TextFormField(
