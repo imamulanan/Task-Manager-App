@@ -4,7 +4,7 @@ import 'package:taskmanager/screen/onboarding/loginScreen.dart';
 import 'package:taskmanager/screen/onboarding/pinVerificationScreen.dart';
 import 'package:taskmanager/screen/onboarding/registrationScreen.dart';
 import 'package:taskmanager/screen/onboarding/setPasswordScreen.dart';
-// import 'package:taskmanager/screen/task/homeScreen.dart';
+import 'package:taskmanager/screen/onboarding/splashScreen.dart';
 import 'screen/task/taskCreateScreen.dart';
 import 'utility/utility.dart';
 
@@ -19,6 +19,10 @@ import 'utility/utility.dart';
 //   }
 // }
 
+void main() {
+  runApp(MyApp('/pinVerification')); // 👈 specify initial route
+}
+
 class MyApp extends StatelessWidget {
   final String FirstRoute;
   MyApp(this.FirstRoute);
@@ -29,12 +33,12 @@ class MyApp extends StatelessWidget {
       title: "Task Manager",
       initialRoute: FirstRoute,
       routes: {
-        // '/':(context)=> homeScreen(),
-        // '/login':(context)=> loginScreen(),
-        // '/registration':(context)=> registrationScreen(),
-        // '/emailVerification':(context)=> emailVerificationScreen(),
-        // '/pinVerification':(context)=> pinVerificationScreen(),
-        // '/setPassword':(context)=> setPasswordScreen(),
+        '/':(context)=> splashScreen(),
+        '/login':(context)=> loginScreen(),
+        '/registration':(context)=> registrationScreen(),
+        '/emailVerification':(context)=> emailVerificationScreen(),
+        '/pinVerification':(context)=> pinVerificationScreen(),
+        '/setPassword':(context)=> setPasswordScreen(),
         // '/taskCreate':(context)=> taskCreateScreen()
       },
     );
