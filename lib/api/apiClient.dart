@@ -40,7 +40,7 @@ Future<bool> RegistrationRequest(FormValues) async{
   }
 }
 
-Future<bool> VerifyEmailRequest(Email) async{
+Future<bool> VerifyEmailRequest(Email) async{ // eta akta get request tai body nai
   var URL=Uri.parse("${BaseURL}/RecoverVerifyEmail/${Email}");
   var response= await http.get(URL,headers:RequestHeader);
   var ResultCode=response.statusCode;
