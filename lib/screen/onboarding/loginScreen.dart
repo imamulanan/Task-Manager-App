@@ -19,24 +19,24 @@ class _loginScreenState extends State<loginScreen> {
     });
   }
 
-  // FormOnSubmit() async{
-  //   if(FormValues['email']!.length==0){
-  //     ErrorToast('Email Required !');
-  //   }
-  //   else if(FormValues['password']!.length==0){
-  //     ErrorToast('Password Required !');
-  //   }
-  //   else{
-  //     setState(() {Loading=true;});
-  //     bool res=await LoginRequest(FormValues);
-  //     if(res==true){
-  //       Navigator.pushNamedAndRemoveUntil(context, "/", (route) => false);
-  //     }
-  //     else{
-  //       setState(() {Loading=false;});
-  //     }
-  //   }
-  // }
+  FormOnSubmit() async{
+    if(FormValues['email']!.length==0){
+      ErrorToast('Email Required !');
+    }
+    else if(FormValues['password']!.length==0){
+      ErrorToast('Password Required !');
+    }
+    else{
+      setState(() {Loading=true;});
+      bool res=await LoginRequest(FormValues);//call API
+      if(res==true){
+        // Navigator.pushNamedAndRemoveUntil(context, "/", (route) => false);
+      }
+      else{
+        setState(() {Loading=false;});
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +80,7 @@ class _loginScreenState extends State<loginScreen> {
                     style: AppButtonStyle(),
                     child: SuccessButtonChild('Login'),
                     onPressed: (){
-                      // FormOnSubmit();
+                      FormOnSubmit();
                     },
                   ),),
 

@@ -20,7 +20,7 @@ import 'utility/utility.dart';
 // }
 
 void main() {
-  runApp(MyApp('/pinVerification')); // 👈 specify initial route
+  runApp(MyApp('/login')); // 👈 specify initial route
 }
 
 class MyApp extends StatelessWidget {
