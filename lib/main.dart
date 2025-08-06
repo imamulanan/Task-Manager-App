@@ -9,20 +9,18 @@ import 'package:taskmanager/screen/task/newTaskListScreen.dart';
 import 'screen/task/taskCreateScreen.dart';
 import 'utility/utility.dart';
 
-// main() async {
-//   WidgetsFlutterBinding.ensureInitialized();
-//   String? token= await ReadUserData('token');
-//   if(token==null){
-//     runApp( MyApp("/login"));
-//   }
-//   else{
-//     runApp( MyApp("/"));
-//   }
-// }
-
-void main() {
-  runApp(MyApp('/login')); // 👈 specify initial route
+main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  String? token= await ReadUserData('token');
+  if(token==null){
+    runApp( MyApp("/newTaskList"));
+  }
+  else{
+    runApp( MyApp("/login"));
+  }
 }
+
+
 
 class MyApp extends StatelessWidget {
   final String FirstRoute;
