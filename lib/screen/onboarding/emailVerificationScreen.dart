@@ -19,21 +19,21 @@ class _emailVerificationScreenState extends State<emailVerificationScreen> {
     });
   }
 
-  // FormOnSubmit() async{
-  //   if(FormValues['email']!.length==0){
-  //     ErrorToast('Email Required !');
-  //   }
-  //   else{
-  //     setState((){Loading=true;});
-  //     bool res=await VerifyEmailRequest(FormValues['email']);
-  //     if(res==true){
-  //       Navigator.pushNamed(context, "/pinVerification");
-  //     }
-  //     else{
-  //       setState(() {Loading=false;});
-  //     }
-  //   }
-  // }
+  FormOnSubmit() async{
+    if(FormValues['email']!.length==0){
+      ErrorToast('Email Required !');
+    }
+    else{
+      setState((){Loading=true;});
+      bool res=await VerifyEmailRequest(FormValues['email']);
+      if(res==true){
+        Navigator.pushNamed(context, "/pinVerification");
+      }
+      else{
+        setState(() {Loading=false;});
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +65,7 @@ class _emailVerificationScreenState extends State<emailVerificationScreen> {
                           style: AppButtonStyle(),
                           child: SuccessButtonChild('Next'),
                           onPressed: (){
-                            // FormOnSubmit();
+                            FormOnSubmit();
                           },
                         ),)
                       ],
