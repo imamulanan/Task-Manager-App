@@ -13,12 +13,14 @@ main() async {
   WidgetsFlutterBinding.ensureInitialized();
   String? token= await ReadUserData('token');
   if(token==null){
-    runApp( MyApp("/newTaskList"));
-  }
-  else{
     runApp( MyApp("/login"));
   }
+  else{
+    runApp( MyApp("/newTaskList"));
+  }
 }
+
+//rabbilidlc@gmail.com pass:1234
 
 
 
