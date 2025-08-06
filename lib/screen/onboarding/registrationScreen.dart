@@ -19,41 +19,41 @@ class _registrationScreenState extends State<registrationScreen> {
     });
   }
 
-  // FormOnSubmit() async{
-  //
-  //   if(FormValues['email']!.length==0){
-  //     ErrorToast('Email Required !');
-  //   }
-  //
-  //   else if(FormValues['firstName']!.length==0){
-  //     ErrorToast('First Name Required !');
-  //   }
-  //
-  //   else if(FormValues['lastName']!.length==0){
-  //     ErrorToast('Last Name Required !');
-  //   }
-  //
-  //   else if(FormValues['mobile']!.length==0){
-  //     ErrorToast('Mobile No Required !');
-  //   }
-  //
-  //   else if(FormValues['password']!.length==0){
-  //     ErrorToast('Mobile No Required !');
-  //   }
-  //   else if(FormValues['password']!=FormValues['cpassword']){
-  //     ErrorToast('Confirm password should be same!');
-  //   }
-  //   else{
-  //     setState(() {Loading=true;});
-  //     bool res=await RegistrationRequest(FormValues);
-  //     if(res==true){
-  //       Navigator.pushNamedAndRemoveUntil(context, "/login", (route) => false);
-  //     }
-  //     else{
-  //       setState(() {Loading=false;});
-  //     }
-  //   }
-  // }
+  FormOnSubmit() async{
+
+    if(FormValues['email']!.length==0){
+      ErrorToast('Email Required !');
+    }
+
+    else if(FormValues['firstName']!.length==0){
+      ErrorToast('First Name Required !');
+    }
+
+    else if(FormValues['lastName']!.length==0){
+      ErrorToast('Last Name Required !');
+    }
+
+    else if(FormValues['mobile']!.length==0){
+      ErrorToast('Mobile No Required !');
+    }
+
+    else if(FormValues['password']!.length==0){
+      ErrorToast('Mobile No Required !');
+    }
+    else if(FormValues['password']!=FormValues['cpassword']){
+      ErrorToast('Confirm password should be same!');
+    }
+    else{
+      setState(() {Loading=true;});
+      bool res=await RegistrationRequest(FormValues);
+      if(res==true){
+        Navigator.pushNamedAndRemoveUntil(context, "/login", (route) => false);
+      }
+      else{
+        setState(() {Loading=false;});
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -129,7 +129,7 @@ class _registrationScreenState extends State<registrationScreen> {
                             style: AppButtonStyle(),
                             child: SuccessButtonChild('Registration'),
                             onPressed: (){
-                              // FormOnSubmit();
+                              FormOnSubmit();
                             },
                           ),)
 
