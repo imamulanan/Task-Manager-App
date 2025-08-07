@@ -21,22 +21,22 @@ class _pinVerificationScreenState extends State<pinVerificationScreen> {
     });
   }
 
-  // FormOnSubmit() async{
-  //   if(FormValues['otp']!.length!=6){
-  //     ErrorToast('PIN Required !');
-  //   }
-  //   else{
-  //     setState(() {Loading=true;});
-  //     String? emailAddress=await ReadUserData('EmailVerification');
-  //     bool res=await VerifyOTPRequest(emailAddress,FormValues['otp']);
-  //     if(res==true){
-  //       Navigator.pushNamed(context, "/setPassword");
-  //     }
-  //     else{
-  //       setState(() {Loading=false;});
-  //     }
-  //   }
-  // }
+  FormOnSubmit() async{
+    if(FormValues['otp']!.length!=6){
+      ErrorToast('PIN Required !');
+    }
+    else{
+      setState(() {Loading=true;});
+      String? emailAddress=await ReadUserData('EmailVerification');
+      bool res=await VerifyOTPRequest(emailAddress,FormValues['otp']);
+      if(res==true){
+        Navigator.pushNamed(context, "/setPassword");
+      }
+      else{
+        setState(() {Loading=false;});
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +74,7 @@ class _pinVerificationScreenState extends State<pinVerificationScreen> {
                     style: AppButtonStyle(),
                     child: SuccessButtonChild('Verify'),
                     onPressed: (){
-                      // FormOnSubmit();
+                      FormOnSubmit();
                     },
                   ),)
                 ],
