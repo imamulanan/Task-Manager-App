@@ -12,21 +12,21 @@ class newTaskList extends StatefulWidget {
 }
 
 class _newTaskListState extends State<newTaskList> {
-  List TaskItems=[];
-  bool Loading=true;
-  String Status="New";
+  List TaskItems = [];
+  bool Loading = true;
+  String Status = "New";
 
   @override
-  void initState(){
+  void initState() {
     CallData();
     super.initState();
   }
 
-  CallData() async{
-    var data= await TaskListRequest("New");
+  CallData() async {
+    var data = await TaskListRequest("New");
     setState(() {
-      Loading=false;
-      TaskItems=data;
+      Loading = false;
+      TaskItems = data;
     });
   }
 
@@ -36,7 +36,6 @@ class _newTaskListState extends State<newTaskList> {
   //   await CallData();
   //   setState(() {Status = "New";});
   // }
-
 
   // DeleteItem(id) async{
   //   showDialog(
@@ -117,14 +116,15 @@ class _newTaskListState extends State<newTaskList> {
   //   );
   // }
 
-
   @override
   Widget build(BuildContext context) {
-    return Loading?(Center(child: CircularProgressIndicator())):RefreshIndicator(
-        onRefresh: () async {
-          await CallData();
-        },
-        child: Text("New")
-    );
+    return Loading
+        ? (Center(child: CircularProgressIndicator()))
+        : RefreshIndicator(
+            onRefresh: () async {
+              await CallData();
+            },
+            child: Text("New"),
+          );
   }
 }
