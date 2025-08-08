@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
         '/emailVerification':(context)=> emailVerificationScreen(),
         '/pinVerification':(context)=> pinVerificationScreen(),
         '/setPassword':(context)=> setPasswordScreen(),
-        '/newTaskList':(context)=> newTaskListScreen(),
+        // '/newTaskList':(context)=> newTaskListScreen(),
       },
     );
   }
