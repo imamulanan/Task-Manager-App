@@ -39,7 +39,7 @@ Future<bool> RemoveToken() async {
 }
 
 ShowBase64Image(Base64String){
-  UriData? data= Uri.parse(Base64String).data;
+  UriData? data= Uri.parse(Base64String).data;//URI= Univershal Resource Identifier
   Uint8List MyImage= data!.contentAsBytes();
   return MyImage;
 }
