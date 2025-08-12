@@ -38,8 +38,21 @@ Future<bool> RemoveToken() async {
   return true;
 }
 
-ShowBase64Image(Base64String){
-  UriData? data= Uri.parse(Base64String).data;//URI= Univershal Resource Identifier
-  Uint8List MyImage= data!.contentAsBytes();
-  return MyImage;
+// ShowBase64Image(Base64String){
+//   UriData? data= Uri.parse(Base64String).data;//URI= Univershal Resource Identifier
+//   Uint8List MyImage= data!.contentAsBytes();
+//   return MyImage;
+// }
+
+Uint8List ShowBase64Image(String? base64String) {
+  if (base64String == null || base64String.isEmpty) {
+    return Uint8List(0); // খালি ইমেজ
+  }
+
+  UriData? data = Uri.parse(base64String).data;
+  if (data == null) {
+    return Uint8List(0); // যদি ডাটা null হয়
+  }
+
+  return data.contentAsBytes();
 }

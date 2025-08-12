@@ -13,7 +13,10 @@ AppBar TaskAppBar(context,ProfileData){
             backgroundColor: Colors.transparent,
             radius: 24,
             child: ClipOval(
-              // child: Image.memory(ShowBase64Image(ProfileData['photo'])),
+              child: ProfileData != null && ProfileData['photo'] != null
+                  ? Image.memory(ShowBase64Image(ProfileData['photo']))
+                  : Icon(Icons.person, size: 48, color: Colors.white),
+
             ),
           ),
           SizedBox(width: 10),
@@ -21,8 +24,8 @@ AppBar TaskAppBar(context,ProfileData){
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Text('${ProfileData['firstName']} ${ProfileData['lastName']}',style: Head7Text(colorWhite),),
-              // Text(ProfileData['email'],style: Head9Text(colorWhite),)
+              Text('${ProfileData['firstName']} ${ProfileData['lastName']}',style: Head7Text(colorWhite),),
+              Text(ProfileData['email'],style: Head9Text(colorWhite),)
             ],
           )
         ],

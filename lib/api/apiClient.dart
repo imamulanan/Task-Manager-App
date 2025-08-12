@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:flutter/cupertino.dart';
 import 'package:taskmanager/Style/Style.dart';
 import 'package:http/http.dart' as http;
 
@@ -30,6 +31,11 @@ Future<bool> RegistrationRequest(FormValues) async{
   var response= await  http.post(URL,headers:RequestHeader,body: PostBody);
   var ResultCode=response.statusCode;
   var ResultBody=json.decode(response.body);
+  // ✅ Console এ status code print
+  debugPrint("📡 Registration API Status Code: $ResultCode");
+
+  // ✅ Console এ full response print (debugging এর জন্য)
+  debugPrint("📡 Registration API Response: $ResultBody");
   if(ResultCode==200 && ResultBody['status']=="success"){
     SuccessToast("Request Success");
     return true;
