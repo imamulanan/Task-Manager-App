@@ -53,8 +53,7 @@ class _homeScreenState extends State<homeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: TaskAppBar(context),
-      // appBar: TaskAppBar(context,ProfileData),
+      appBar: TaskAppBar(context,ProfileData),
       body: widgetOptions.elementAt(TabIndex),
       bottomNavigationBar: appBottomNav(TabIndex,onItemTapped),
     );

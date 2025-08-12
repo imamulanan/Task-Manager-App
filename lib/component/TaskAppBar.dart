@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:taskmanager/style/style.dart';
 import 'package:taskmanager/utility/utility.dart';
 
-AppBar TaskAppBar(context,/*ProfileData*/){
+AppBar TaskAppBar(context,ProfileData){
   return AppBar(
     backgroundColor: colorGreen,
     flexibleSpace: Container(
