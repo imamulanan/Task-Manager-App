@@ -124,7 +124,7 @@ class _newTaskListState extends State<newTaskList> {
             onRefresh: () async {
               await CallData();
             },
-            child: TaskList(TaskItems),
+            child: TaskList(TaskItems,DeleteItem),
           );
   }
 }

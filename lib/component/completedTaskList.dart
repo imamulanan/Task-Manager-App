@@ -151,7 +151,7 @@ class _completedTaskListState extends State<completedTaskList> {
             onRefresh: () async {
               await CallData();
             },
-            child: TaskList(TaskItems, /*DeleteItem, StatusChange*/),
+            child: TaskList(TaskItems, DeleteItem,/* StatusChange*/),
           );
   }
 }

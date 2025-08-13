@@ -139,7 +139,7 @@ class _progressTaskListState extends State<progressTaskList> {
             onRefresh: () async {
               await CallData();
             },
-            child: TaskList(TaskItems, /*DeleteItem, StatusChange*/),
+            child: TaskList(TaskItems, DeleteItem,/* StatusChange*/),
           );
   }
 }
