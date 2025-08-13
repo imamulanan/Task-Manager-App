@@ -39,36 +39,36 @@ class _cancelTaskListState extends State<cancelTaskList> {
   //   });
   // }
   //
-  // DeleteItem(id) async {
-  //   showDialog(
-  //     context: context,
-  //     builder: (BuildContext context) {
-  //       return AlertDialog(
-  //         title: Text("Delete !"),
-  //         content: Text("Onece delete, you can't get it back"),
-  //         actions: [
-  //           OutlinedButton(
-  //             onPressed: () async {
-  //               Navigator.pop(context);
-  //               setState(() {
-  //                 Loading = true;
-  //               });
-  //               await TaskDeleteRequest(id);
-  //               await CallData();
-  //             },
-  //             child: Text('Yes'),
-  //           ),
-  //           OutlinedButton(
-  //             onPressed: () {
-  //               Navigator.pop(context);
-  //             },
-  //             child: Text('No'),
-  //           ),
-  //         ],
-  //       );
-  //     },
-  //   );
-  // }
+  DeleteItem(id) async {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("Delete !"),
+          content: Text("Onece delete, you can't get it back"),
+          actions: [
+            OutlinedButton(
+              onPressed: () async {
+                Navigator.pop(context);
+                setState(() {
+                  Loading = true;
+                });
+                await TaskDeleteRequest(id);
+                await CallData();
+              },
+              child: Text('Yes'),
+            ),
+            OutlinedButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text('No'),
+            ),
+          ],
+        );
+      },
+    );
+  }
 
   StatusChange(id) async {
     showModalBottomSheet(
