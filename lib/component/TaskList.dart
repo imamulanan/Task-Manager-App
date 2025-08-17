@@ -43,7 +43,7 @@ ListView TaskList(TaskItems,DeleteItem,StatusChange) {
                           height: 30,
                           child: ElevatedButton(
                             onPressed: () {
-                              // StatusChange(TaskItems[index]['_id']);
+                              StatusChange(TaskItems[index]['_id']);
                             },
                             style: AppStatusButtonStyle(colorBlue),
                             child: Icon(

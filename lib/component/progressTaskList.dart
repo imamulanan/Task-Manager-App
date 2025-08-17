@@ -118,7 +118,7 @@ class _progressTaskListState extends State<progressTaskList> {
                       child: SuccessButtonChild('Confirm'),
                       onPressed: () {
                         Navigator.pop(context);
-                        // UpdateStatus(id);
+                        UpdateStatus(id);
                       },
                     ),
                   ),

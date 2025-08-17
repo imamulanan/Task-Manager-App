@@ -130,7 +130,7 @@ class _completedTaskListState extends State<completedTaskList> {
                       child: SuccessButtonChild('Confirm'),
                       onPressed: () {
                         Navigator.pop(context);
-                        // UpdateStatus(id);
+                        UpdateStatus(id);
                       },
                     ),
                   ),

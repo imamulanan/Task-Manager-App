@@ -127,7 +127,7 @@ class _cancelTaskListState extends State<cancelTaskList> {
                     child: SuccessButtonChild('Confirm'),
                     onPressed: () {
                       Navigator.pop(context);
-                      // UpdateStatus(id);
+                      UpdateStatus(id);
                     },
                   ),
                 ],
