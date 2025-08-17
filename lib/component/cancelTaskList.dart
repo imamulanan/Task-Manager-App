@@ -4,7 +4,7 @@ import '../api/apiClient.dart';
 import 'TaskList.dart';
 
 class cancelTaskList extends StatefulWidget {
-  const cancelTaskList({Key? key}) : super(key: key);
+  const cancelTaskList({super.key});
   @override
   State<cancelTaskList> createState() => _cancelTaskListState();
 }

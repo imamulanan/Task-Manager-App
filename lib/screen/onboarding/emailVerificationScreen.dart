@@ -4,7 +4,7 @@ import '../../api/apiClient.dart';
 import '../../style/style.dart';
 
 class emailVerificationScreen extends StatefulWidget {
-  const emailVerificationScreen({Key? key}) : super(key: key);
+  const emailVerificationScreen({super.key});
   @override
   State<emailVerificationScreen> createState() =>
       _emailVerificationScreenState();
@@ -21,7 +21,7 @@ class _emailVerificationScreenState extends State<emailVerificationScreen> {
   }
 
   FormOnSubmit() async {
-    if (FormValues['email']!.length == 0) {
+    if (FormValues['email']!.isEmpty) {
       ErrorToast('Email Required !');
     } else {
       setState(() {

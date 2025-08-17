@@ -5,7 +5,7 @@ import '../api/apiClient.dart';
 import 'TaskList.dart';
 
 class progressTaskList extends StatefulWidget {
-  const progressTaskList({Key? key}) : super(key: key);
+  const progressTaskList({super.key});
 
   @override
   State<progressTaskList> createState() => _progressTaskListState();

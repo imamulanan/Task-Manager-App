@@ -45,11 +45,11 @@ ListView TaskList(TaskItems,DeleteItem) {
                             onPressed: () {
                               // StatusChange(TaskItems[index]['_id']);
                             },
+                            style: AppStatusButtonStyle(colorBlue),
                             child: Icon(
                               Icons.edit_location_alt_outlined,
                               size: 16,
                             ),
-                            style: AppStatusButtonStyle(colorBlue),
                           ),
                         ),
 
@@ -62,8 +62,8 @@ ListView TaskList(TaskItems,DeleteItem) {
                             onPressed: () {
                               DeleteItem(TaskItems[index]['_id']);
                             },
-                            child: Icon(Icons.delete_outlined, size: 16),
                             style: AppStatusButtonStyle(colorRed),
+                            child: Icon(Icons.delete_outlined, size: 16),
                           ),
                         ),
                       ],

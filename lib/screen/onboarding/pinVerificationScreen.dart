@@ -5,7 +5,7 @@ import '../../style/style.dart';
 import '../../utility/utility.dart';
 
 class pinVerificationScreen extends StatefulWidget {
-  const pinVerificationScreen({Key? key}) : super(key: key);
+  const pinVerificationScreen({super.key});
   @override
   State<pinVerificationScreen> createState() => _pinVerificationScreenState();
 }

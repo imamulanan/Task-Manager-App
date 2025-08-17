@@ -4,7 +4,7 @@ import '../../style/style.dart';
 import '../../utility/utility.dart';
 
 class setPasswordScreen extends StatefulWidget {
-  const setPasswordScreen({Key? key}) : super(key: key);
+  const setPasswordScreen({super.key});
   @override
   State<setPasswordScreen> createState() => _setPasswordScreenState();
 }
@@ -38,7 +38,7 @@ class _setPasswordScreenState extends State<setPasswordScreen> {
   }
 
   FormOnSubmit() async {
-    if (FormValues['password']!.length == 0) {
+    if (FormValues['password']!.isEmpty) {
       ErrorToast('Password Required !');
     } else if (FormValues['password'] != FormValues['cpassword']) {
       ErrorToast('Confirm password should be same!');

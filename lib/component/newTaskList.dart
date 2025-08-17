@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:taskmanager/api/apiClient.dart';
 
-import '../Style/Style.dart';
 import 'TaskList.dart';
 
 class newTaskList extends StatefulWidget {
-  const newTaskList({Key? key}) : super(key: key);
+  const newTaskList({super.key});
 
   @override
   State<newTaskList> createState() => _newTaskListState();
@@ -30,12 +29,12 @@ class _newTaskListState extends State<newTaskList> {
     });
   }
 
-  // UpdateStatus(id) async{
-  //   setState(() {Loading=true;});
-  //   await TaskUpdateRequest(id,Status);
-  //   await CallData();
-  //   setState(() {Status = "New";});
-  // }
+  UpdateStatus(id) async{
+    setState(() {Loading=true;});
+    await TaskUpdateRequest(id,Status);
+    await CallData();
+    setState(() {Status = "New";});
+  }
 
   DeleteItem(id) async{
     showDialog(

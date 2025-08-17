@@ -4,9 +4,7 @@ import 'package:taskmanager/screen/onboarding/loginScreen.dart';
 import 'package:taskmanager/screen/onboarding/pinVerificationScreen.dart';
 import 'package:taskmanager/screen/onboarding/registrationScreen.dart';
 import 'package:taskmanager/screen/onboarding/setPasswordScreen.dart';
-import 'package:taskmanager/screen/onboarding/splashScreen.dart';
 import 'package:taskmanager/screen/task/homeScreen.dart';
-import 'package:taskmanager/component/newTaskList.dart';
 import 'package:taskmanager/screen/task/taskCreateScreen.dart';
 import 'utility/utility.dart';
 
@@ -31,7 +29,7 @@ main() async {
 
 class MyApp extends StatelessWidget {
   final String FirstRoute;
-  MyApp(this.FirstRoute);
+  const MyApp(this.FirstRoute, {super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

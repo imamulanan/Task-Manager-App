@@ -1,10 +1,9 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import '../../api/apiClient.dart';
 import '../../style/style.dart';
 
 class registrationScreen extends StatefulWidget {
-  const registrationScreen({Key? key}) : super(key: key);
+  const registrationScreen({super.key});
   @override
   State<registrationScreen> createState() => _registrationScreenState();
 }
@@ -28,15 +27,15 @@ class _registrationScreenState extends State<registrationScreen> {
   }
 
   FormOnSubmit() async {
-    if (FormValues['email']!.length == 0) {
+    if (FormValues['email']!.isEmpty) {
       ErrorToast('Email Required !');
-    } else if (FormValues['firstName']!.length == 0) {
+    } else if (FormValues['firstName']!.isEmpty) {
       ErrorToast('First Name Required !');
-    } else if (FormValues['lastName']!.length == 0) {
+    } else if (FormValues['lastName']!.isEmpty) {
       ErrorToast('Last Name Required !');
-    } else if (FormValues['mobile']!.length == 0) {
+    } else if (FormValues['mobile']!.isEmpty) {
       ErrorToast('Mobile No Required !');
-    } else if (FormValues['password']!.length == 0) {
+    } else if (FormValues['password']!.isEmpty) {
       ErrorToast('Mobile No Required !');
     } else if (FormValues['password'] != FormValues['cpassword']) {
       ErrorToast('Confirm password should be same!');

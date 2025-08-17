@@ -82,13 +82,13 @@ TextStyle Head9Text(textColor){
 InputDecoration AppInputDecoration(label){
   return InputDecoration(
       focusedBorder:  const OutlineInputBorder(
-        borderSide: const BorderSide(color: colorGreen, width: 1),
+        borderSide: BorderSide(color: colorGreen, width: 1),
       ),
       fillColor: colorWhite,
       filled: true,
       contentPadding: EdgeInsets.fromLTRB(20, 10, 10, 20),
       enabledBorder: const OutlineInputBorder(
-        borderSide: const BorderSide(color: colorWhite, width: 0.0),
+        borderSide: BorderSide(color: colorWhite, width: 0.0),
       ),
       border: OutlineInputBorder(),
       labelText: label
@@ -160,13 +160,13 @@ Ink SuccessButtonChild(String ButtonText){
 Container StatusChild(statusText,statusColor){
   return  Container(
     alignment: Alignment.center,
-    child:Text(statusText,style: TextStyle(color: colorWhite,fontSize: 10,fontWeight: FontWeight.w400)),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(20),
       color: statusColor,
     ),
     height: 20,
     width: 60,
+    child:Text(statusText,style: TextStyle(color: colorWhite,fontSize: 10,fontWeight: FontWeight.w400)),
   );
 }
 

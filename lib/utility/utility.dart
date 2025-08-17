@@ -27,7 +27,7 @@ Future<void> WriteOTPVerification(OTP) async {
 
 Future<String?> ReadUserData(Key) async {
   final prefs = await SharedPreferences.getInstance();
-  String? mydata= await prefs.getString(Key);
+  String? mydata= prefs.getString(Key);
   return mydata;
 }
 

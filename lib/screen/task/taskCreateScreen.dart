@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../Style/Style.dart';
@@ -23,10 +22,10 @@ class _taskCreateScreenState extends State<taskCreateScreen> {
   }
 
   FormOnSubmit() async{
-    if(FormValues['title']!.length==0){
+    if(FormValues['title']!.isEmpty){
       ErrorToast('Title Required !');
     }
-    else if(FormValues['description']!.length==0){
+    else if(FormValues['description']!.isEmpty){
       ErrorToast('Description Required !');
     }
     else{

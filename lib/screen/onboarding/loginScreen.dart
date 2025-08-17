@@ -3,7 +3,7 @@ import '../../api/apiClient.dart';
 import '../../style/style.dart';
 
 class loginScreen extends StatefulWidget {
-  const loginScreen({Key? key}) : super(key: key);
+  const loginScreen({super.key});
   @override
   State<loginScreen> createState() => _loginScreenState();
 }
@@ -20,10 +20,10 @@ class _loginScreenState extends State<loginScreen> {
   }
 
   FormOnSubmit() async{
-    if(FormValues['email']!.length==0){
+    if(FormValues['email']!.isEmpty){
       ErrorToast('Email Required !');
     }
-    else if(FormValues['password']!.length==0){
+    else if(FormValues['password']!.isEmpty){
       ErrorToast('Password Required !');
     }
     else{
