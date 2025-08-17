@@ -28,17 +28,17 @@ class _cancelTaskListState extends State<cancelTaskList> {
     });
   }
 
-  // UpdateStatus(id) async {
-  //   setState(() {
-  //     Loading = true;
-  //   });
-  //   await TaskUpdateRequest(id, Status);
-  //   await CallData();
-  //   setState(() {
-  //     Status = "Canceled";
-  //   });
-  // }
-  //
+  UpdateStatus(id) async {
+    setState(() {
+      Loading = true;
+    });
+    await TaskUpdateRequest(id, Status);
+    await CallData();
+    setState(() {
+      Status = "Canceled";
+    });
+  }
+  
   DeleteItem(id) async {
     showDialog(
       context: context,
@@ -147,7 +147,7 @@ class _cancelTaskListState extends State<cancelTaskList> {
             onRefresh: () async {
               await CallData();
             },
-            child: TaskList(TaskItems, DeleteItem, /*StatusChange*/),
+            child: TaskList(TaskItems, DeleteItem, StatusChange),
           );
   }
 }

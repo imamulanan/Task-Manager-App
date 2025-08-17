@@ -61,16 +61,16 @@ class _completedTaskListState extends State<completedTaskList> {
     );
   }
 
-  // UpdateStatus(id) async {
-  //   setState(() {
-  //     Loading = true;
-  //   });
-  //   await TaskUpdateRequest(id, Status);
-  //   await CallData();
-  //   setState(() {
-  //     Status = "Completed";
-  //   });
-  // }
+  UpdateStatus(id) async {
+    setState(() {
+      Loading = true;
+    });
+    await TaskUpdateRequest(id, Status);
+    await CallData();
+    setState(() {
+      Status = "Completed";
+    });
+  }
 
   StatusChange(id) async {
     showModalBottomSheet(
@@ -151,7 +151,7 @@ class _completedTaskListState extends State<completedTaskList> {
             onRefresh: () async {
               await CallData();
             },
-            child: TaskList(TaskItems, DeleteItem,/* StatusChange*/),
+            child: TaskList(TaskItems, DeleteItem,StatusChange),
           );
   }
 }

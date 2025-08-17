@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../style/style.dart';
 
-ListView TaskList(TaskItems,DeleteItem) {
+ListView TaskList(TaskItems,DeleteItem,StatusChange) {
   return ListView.builder(
     itemCount: TaskItems.length,
     itemBuilder: (context, index) {

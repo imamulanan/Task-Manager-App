@@ -30,12 +30,12 @@ class _progressTaskListState extends State<progressTaskList> {
     });
   }
 
-  // UpdateStatus(id) async{
-  //   setState(() {Loading=true;});
-  //   await TaskUpdateRequest(id,Status);
-  //   await CallData();
-  //   setState(() {Status = "Progress";});
-  // }
+  UpdateStatus(id) async{
+    setState(() {Loading=true;});
+    await TaskUpdateRequest(id,Status);
+    await CallData();
+    setState(() {Status = "Progress";});
+  }
 
   DeleteItem(id) async{
     showDialog(
@@ -139,7 +139,7 @@ class _progressTaskListState extends State<progressTaskList> {
             onRefresh: () async {
               await CallData();
             },
-            child: TaskList(TaskItems, DeleteItem,/* StatusChange*/),
+            child: TaskList(TaskItems, DeleteItem,StatusChange),
           );
   }
 }
